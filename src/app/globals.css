@@ -1,42 +1,771 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2024 Indian Type Foundry
+*
+* Satoshi Light 
+* Satoshi LightItalic 
+* Satoshi Regular 
+* Satoshi Italic 
+* Satoshi Medium 
+* Satoshi MediumItalic 
+* Satoshi Bold 
+* Satoshi BoldItalic 
+* Satoshi Black 
+* Satoshi BlackItalic 
+* Satoshi Variable (Variable font)
+* Satoshi VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "Satoshi-Light";
+  src: url("../app/fonts/Satoshi-Light.woff2") format("woff2"), url("../app/fonts/Satoshi-Light.woff") format("woff"), url("../app/fonts/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-LightItalic";
+  src: url("../app/fonts/Satoshi-LightItalic.woff2") format("woff2"), url("../app/fonts/Satoshi-LightItalic.woff") format("woff"), url("../app/fonts/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("../app/fonts/Satoshi-Regular.woff2") format("woff2"), url("../app/fonts/Satoshi-Regular.woff") format("woff"), url("../app/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Italic";
+  src: url("../app/fonts/Satoshi-Italic.woff2") format("woff2"), url("../app/fonts/Satoshi-Italic.woff") format("woff"), url("../app/fonts/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../app/fonts/Satoshi-Medium.woff2") format("woff2"), url("../app/fonts/Satoshi-Medium.woff") format("woff"), url("../app/fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-MediumItalic";
+  src: url("../app/fonts/Satoshi-MediumItalic.woff2") format("woff2"), url("../app/fonts/Satoshi-MediumItalic.woff") format("woff"), url("../app/fonts/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../app/fonts/Satoshi-Bold.woff2") format("woff2"), url("../app/fonts/Satoshi-Bold.woff") format("woff"), url("../app/fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BoldItalic";
+  src: url("../app/fonts/Satoshi-BoldItalic.woff2") format("woff2"), url("../app/fonts/Satoshi-BoldItalic.woff") format("woff"), url("../app/fonts/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../app/fonts/Satoshi-Black.woff2") format("woff2"), url("../app/fonts/Satoshi-Black.woff") format("woff"), url("../app/fonts/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BlackItalic";
+  src: url("../app/fonts/Satoshi-BlackItalic.woff2") format("woff2"), url("../app/fonts/Satoshi-BlackItalic.woff") format("woff"), url("../app/fonts/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 300.0 to 900.0
+*/
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../app/fonts/Satoshi-Variable.woff2") format("woff2"), url("../app/fonts/Satoshi-Variable.woff") format("woff"), url("../app/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 300.0 to 900.0
+*/
+@font-face {
+  font-family: "Satoshi-VariableItalic";
+  src: url("../app/fonts/Satoshi-VariableItalic.woff2") format("woff2"), url("../app/fonts/Satoshi-VariableItalic.woff") format("woff"), url("../app/fonts/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+ * @license
+ *
+ * Font Family: Cabinet Grotesk
+ * Designed by: ITF
+ * URL: https://www.fontshare.com/fonts/cabinet-grotesk
+ * © 2022 Indian Type Foundry
+ *
+ * Font Styles:
+ * Cabinet Grotesk Variable(Variable font)
+ * Cabinet Grotesk Thin
+ * Cabinet Grotesk Extralight
+ * Cabinet Grotesk Light
+ * Cabinet Grotesk Regular
+ * Cabinet Grotesk Medium
+ * Cabinet Grotesk Bold
+ * Cabinet Grotesk Extrabold         
+ * Cabinet Grotesk Black
+ *
+*/
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 100.0 to 900.0)
+
+*/
+@font-face {
+  font-family: "CabinetGrotesk-Variable";
+  src: url("../app/fonts/CabinetGrotesk-Variable.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Variable.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Thin";
+  src: url("../app/fonts/CabinetGrotesk-Thin.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Thin.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Extralight";
+  src: url("../app/fonts/CabinetGrotesk-Extralight.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Extralight.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Light";
+  src: url("../app/fonts/CabinetGrotesk-Light.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Light.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Regular";
+  src: url("../app/fonts/CabinetGrotesk-Regular.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Regular.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Medium";
+  src: url("../app/fonts/CabinetGrotesk-Medium.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Medium.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Bold";
+  src: url("../app/fonts/CabinetGrotesk-Bold.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Bold.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Extrabold";
+  src: url("../app/fonts/CabinetGrotesk-Extrabold.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Extrabold.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CabinetGrotesk-Black";
+  src: url("../app/fonts/CabinetGrotesk-Black.woff2") format("woff2"), url("../app/fonts/CabinetGrotesk-Black.woff") format("woff"), url("../app/fonts/CabinetGrotesk-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* @license
+*
+* Font Family: Zodiak
+* Designed by: Jérémie Hornus, Gaetan Baehr, Jean-Baptiste Morizot, Alisa Nowak, Theo Guillard
+* URL: https://www.fontshare.com/fonts/zodiak
+* © 2024 Indian Type Foundry
+*
+* Zodiak Thin 
+* Zodiak ThinItalic 
+* Zodiak Light 
+* Zodiak LightItalic 
+* Zodiak Regular 
+* Zodiak Italic 
+* Zodiak Bold 
+* Zodiak BoldItalic 
+* Zodiak Extrabold 
+* Zodiak ExtraboldItalic 
+* Zodiak Black 
+* Zodiak BlackItalic 
+* Zodiak Variable (Variable font)
+* Zodiak VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "Zodiak-Thin";
+  src: url("../app/fonts/Zodiak-Thin.woff2") format("woff2"), url("../app/fonts/Zodiak-Thin.woff") format("woff"), url("../app/fonts/Zodiak-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zodiak-ThinItalic";
+  src: url("../app/fonts/Zodiak-ThinItalic.woff2") format("woff2"), url("../app/fonts/Zodiak-ThinItalic.woff") format("woff"), url("../app/fonts/Zodiak-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Zodiak-Light";
+  src: url("../app/fonts/Zodiak-Light.woff2") format("woff2"), url("../app/fonts/Zodiak-Light.woff") format("woff"), url("../app/fonts/Zodiak-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zodiak-LightItalic";
+  src: url("../app/fonts/Zodiak-LightItalic.woff2") format("woff2"), url("../app/fonts/Zodiak-LightItalic.woff") format("woff"), url("../app/fonts/Zodiak-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Zodiak-Regular";
+  src: url("../app/fonts/Zodiak-Regular.woff2") format("woff2"), url("../app/fonts/Zodiak-Regular.woff") format("woff"), url("../app/fonts/Zodiak-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zodiak-Italic";
+  src: url("../app/fonts/Zodiak-Italic.woff2") format("woff2"), url("../app/fonts/Zodiak-Italic.woff") format("woff"), url("../app/fonts/Zodiak-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Zodiak-Bold";
+  src: url("../app/fonts/Zodiak-Bold.woff2") format("woff2"), url("../app/fonts/Zodiak-Bold.woff") format("woff"), url("../app/fonts/Zodiak-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zodiak-BoldItalic";
+  src: url("../app/fonts/Zodiak-BoldItalic.woff2") format("woff2"), url("../app/fonts/Zodiak-BoldItalic.woff") format("woff"), url("../app/fonts/Zodiak-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Zodiak-Extrabold";
+  src: url("../app/fonts/Zodiak-Extrabold.woff2") format("woff2"), url("../app/fonts/Zodiak-Extrabold.woff") format("woff"), url("../app/fonts/Zodiak-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zodiak-ExtraboldItalic";
+  src: url("../app/fonts/Zodiak-ExtraboldItalic.woff2") format("woff2"), url("../app/fonts/Zodiak-ExtraboldItalic.woff") format("woff"), url("../app/fonts/Zodiak-ExtraboldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Zodiak-Black";
+  src: url("../app/fonts/Zodiak-Black.woff2") format("woff2"), url("../app/fonts/Zodiak-Black.woff") format("woff"), url("../app/fonts/Zodiak-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zodiak-BlackItalic";
+  src: url("../app/fonts/Zodiak-BlackItalic.woff2") format("woff2"), url("../app/fonts/Zodiak-BlackItalic.woff") format("woff"), url("../app/fonts/Zodiak-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: "Zodiak-Variable";
+  src: url("../app/fonts/Zodiak-Variable.woff2") format("woff2"), url("../app/fonts/Zodiak-Variable.woff") format("woff"), url("../app/fonts/Zodiak-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 900.0;
+*
+* available axes:
+'wght' (range from 100.0 to 900.0
+*/
+@font-face {
+  font-family: "Zodiak-VariableItalic";
+  src: url("../app/fonts/Zodiak-VariableItalic.woff2") format("woff2"), url("../app/fonts/Zodiak-VariableItalic.woff") format("woff"), url("../app/fonts/Zodiak-VariableItalic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+.block {
+  background-color: rgb(23, 23, 23);
+  border: solid 1px rgb(90, 90, 90);
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+.block:hover {
+  border: solid 1px rgb(115, 0, 138);
+}
+
+.special {
+  font-size: 0.8rem;
+  color: rgb(111, 111, 111);
+}
+
+.details {
+  font-size: 1.2rem;
+}
+
+.gabinet {
+  font-family: "CabinetGrotesk-Regular", sans-serif;
+}
+
+.title-gabinet {
+  font-size: 1.25rem;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+}
+
+.satoshi-light {
+  font-family: "Satoshi-Light";
+}
+
+.satoshi-italic {
+  font-family: "Satoshi-Italic";
+}
+
+.me {
+  grid-column-end: span 3;
+  grid-row-end: span 4;
+  display: flex;
+  gap: 20px;
+}
+.me-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.me-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.me-info-text strong {
+  font-family: "Satoshi-Bold";
+}
+.me-info-text div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.me-info-socials {
+  display: flex;
+  gap: 20px;
+}
+.me-info-socials a {
+  border-top: 1px solid rgb(115, 0, 138);
+  border-right: 3px solid rgb(115, 0, 138);
+  border-bottom: 3px solid rgb(115, 0, 138);
+  border-left: 1px solid rgb(115, 0, 138);
+  border-radius: 7px;
+  padding: 7px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.me-info-socials a svg {
+  height: 25px;
+  width: 25px;
+  overflow: visible;
+  fill: white;
+}
+.me-info-socials a:hover svg path {
+  height: 20px;
+  fill: rgb(115, 0, 138);
+}
+.me-info-socials button {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  border-top: 1px solid rgb(115, 0, 138);
+  border-right: 3px solid rgb(115, 0, 138);
+  border-bottom: 3px solid rgb(115, 0, 138);
+  border-left: 1px solid rgb(115, 0, 138);
+  border-radius: 7px;
+  padding: 7px 15px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.me-info-socials button:hover {
+  color: rgb(115, 0, 138);
+}
+.me-photo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 7px;
+}
+
+.about-me {
+  grid-row-end: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.about-me div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-me div ul {
+  list-style: circle;
+}
+.about-me div ul li {
+  list-style-position: inside;
+}
+.about-me div p {
+  font-size: 0.9rem;
+}
+
+.contact {
+  grid-row-end: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact .details {
+  font-size: 1.1rem;
+  color: rgb(111, 111, 111);
+}
+.contact p {
+  font-size: 0.9rem;
+  font-style: oblique;
+}
+.contact div {
+  display: flex;
+  flex-direction: column;
+}
+.contact div a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.actualidad {
+  grid-row-end: span 2;
+}
+
+.estudios {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../../public/Estudios.jpg");
+}
+.estudios:hover .svg-icon path {
+  transform: translate(5px, -5px);
+  fill: rgb(115, 0, 138);
+}
+
+.proyectos {
+  grid-row-end: span 2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../../public/projects/Pokedex.png");
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+.proyectos div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+.proyectos:hover .svg-icon path {
+  transform: translate(5px, -5px);
+  fill: rgb(115, 0, 138);
+}
+
+.experiencia {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../../public/Experiencia.png");
+}
+.experiencia:hover .svg-icon path {
+  transform: translate(5px, -5px);
+  fill: rgb(115, 0, 138);
+}
+
+.footer {
+  grid-column-end: span 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reloj {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Zodiak-Bold", ui-serif, Georgia, serif;
+  font-size: 1.5rem;
+  gap: 10px;
+}
+.reloj .segundos {
+  display: flex;
+  width: 30px;
+  font-size: 1rem;
+}
+
+.svg-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  overflow: visible;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
+  font-family: "Satoshi-Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.2rem;
   text-decoration: none;
+  transition-duration: 200ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+main {
+  width: 80%;
+  max-width: 1200px;
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+  justify-items: stretch;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.background {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(17, 17, 17) 50%), url("../../public/Background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=globals.css.map */

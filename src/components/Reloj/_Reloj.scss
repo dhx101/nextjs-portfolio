@@ -1,0 +1,14 @@
+.reloj {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: "Zodiak-Bold", ui-serif, Georgia, serif;
+    font-size: 1.5rem;
+	gap: 10px;
+	.segundos {
+		display: flex;
+		width: 30px;
+		font-size: 1rem;
+	}
+}
