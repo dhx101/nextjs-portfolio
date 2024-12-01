@@ -802,7 +802,7 @@ table {
 }
 .pagProyecto .preview .stack {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .pagProyecto .preview .stack ul {
