@@ -1,20 +1,42 @@
 {
   "pages": {
-    "/api/proyectos/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/proyectos/route.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-82bb0287835ed79a.js",
+      "static/chunks/517-8b8fb3510f21e96b.js",
+      "static/chunks/main-app-9a7b82c3acff4fae.js",
+      "static/chunks/app/_not-found/page-6727d4dc5e19a2d5.js"
     ],
     "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-82bb0287835ed79a.js",
+      "static/chunks/517-8b8fb3510f21e96b.js",
+      "static/chunks/main-app-9a7b82c3acff4fae.js",
+      "static/css/6dd05cf618a04992.css",
+      "static/chunks/app/layout-7f1e43b42a6b4197.js"
     ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+    "/api/proyectos/route": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-82bb0287835ed79a.js",
+      "static/chunks/517-8b8fb3510f21e96b.js",
+      "static/chunks/main-app-9a7b82c3acff4fae.js",
+      "static/chunks/app/api/proyectos/route-a6565584d07c504d.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-82bb0287835ed79a.js",
+      "static/chunks/517-8b8fb3510f21e96b.js",
+      "static/chunks/main-app-9a7b82c3acff4fae.js",
+      "static/chunks/74-66eb3c897644ed23.js",
+      "static/chunks/app/page-38ed3a27a525cf39.js"
+    ],
+    "/proyectos/page": [
+      "static/chunks/webpack-9edee2920554d0a5.js",
+      "static/chunks/4bd1b696-82bb0287835ed79a.js",
+      "static/chunks/517-8b8fb3510f21e96b.js",
+      "static/chunks/main-app-9a7b82c3acff4fae.js",
+      "static/chunks/74-66eb3c897644ed23.js",
+      "static/chunks/app/proyectos/page-228b016f6c42533c.js"
     ]
   }
 }
