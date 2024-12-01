@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 const BackBtn = () => {
   return (
-    <button>
+    <Link href='/' className='backButton'>
         Volver atrás
-    </button>
+    </Link >
   )
 }
 

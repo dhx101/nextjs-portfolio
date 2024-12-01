@@ -502,6 +502,8 @@ table {
   border-radius: 7px;
   color: rgb(255, 255, 255);
   padding: 20px;
+  animation: fadeIn 0.5s ease-in forwards;
+  opacity: 0;
 }
 .block:hover {
   border: solid 1px rgb(115, 0, 138);
@@ -737,12 +739,106 @@ table {
   overflow: visible;
 }
 
+.pagProyecto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.pagProyecto .scroller {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  overflow-y: scroll;
+}
+.pagProyecto .scroller .singleScroller {
+  background-color: rgb(23, 23, 23);
+  border: solid 1px rgb(90, 90, 90);
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+.pagProyecto .scroller .singleScroller:hover {
+  color: rgb(115, 0, 138);
+}
+.pagProyecto .scroller .active-project {
+  transform: translateX(20px);
+}
+.pagProyecto .preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+  width: -moz-min-content;
+  width: min-content;
+  width: 70%;
+  height: -moz-min-content;
+  height: min-content;
+  margin: 5%;
+  position: relative;
+}
+.pagProyecto .preview div {
+  background-color: rgb(23, 23, 23);
+  border: solid 1px rgb(90, 90, 90);
+  color: white;
+  font-size: 2rem;
+  height: 3rem;
+  padding: 15px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.pagProyecto .preview div a {
+  color: white;
+  font-size: 1.5rem;
+}
+.pagProyecto .preview .stack {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.pagProyecto .preview .stack ul {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.pagProyecto .preview .stack ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagProyecto .preview img {
+  width: 100%;
+  border-radius: 7px;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Satoshi-Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 1.2rem;
   text-decoration: none;
   transition-duration: 200ms;
+}
+*::-webkit-scrollbar {
+  background-color: #000;
+  width: 12px;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+*::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #a520ca), color-stop(1, #2681cc));
+  border-radius: 10px;
 }
 
 body {
@@ -752,7 +848,7 @@ body {
   align-items: center;
 }
 
-main {
+.home {
   width: 80%;
   max-width: 1200px;
   display: grid;
@@ -768,4 +864,27 @@ main {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(17, 17, 17) 50%), url("../../public/Background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.backButton {
+  border: solid 1px rgb(90, 90, 90);
+  background-color: #000;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=globals.css.map */

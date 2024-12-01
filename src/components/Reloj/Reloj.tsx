@@ -1,7 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
-const Reloj = () => {
+interface RelojProps {
+	style?: React.CSSProperties;
+}
+
+const Reloj: FC<RelojProps> = ({ style }) => {
 	const [hora, setHora] = useState("00:00");
 	const [segundos, setSegundos] = useState("00");
 	useEffect(() => {
@@ -23,7 +27,9 @@ const Reloj = () => {
 	});
 
 	return (
-		<div className="block reloj">
+		<div
+			className="block reloj"
+			style={style}>
 			<p>{hora}</p> <span className="segundos">{segundos}</span>
 		</div>
 	);
