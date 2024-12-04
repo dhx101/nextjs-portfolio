@@ -10,7 +10,6 @@
 	box-sizing: border-box;
 	font-family: "Satoshi-Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-	line-height: 1.2rem;
 	text-decoration: none;
 	transition-duration: 200ms;
 	&::-webkit-scrollbar {
@@ -41,7 +40,6 @@ body {
 	align-items: center;
 }
 .home {
-	width: 80%;
 	max-width: 1160px;
 	display: grid;
 	padding: 20px;

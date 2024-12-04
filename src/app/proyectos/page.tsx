@@ -1,5 +1,5 @@
+import data from "../../../public/jsons/projects.json";
 import { Metadata } from "next";
-import { getProjects } from "@/helper/getProjects";
 import ProjectContent from "./ProjectContent";
 
 export const metadata: Metadata = {
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 const Page = async () => {
 	try {
-		const data = await getProjects();
 		return <ProjectContent projects={data} />;
 	} catch (error) {
 		console.error(error);

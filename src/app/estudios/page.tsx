@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import React from "react";
-import { getStudies } from "@/helper/getStudies";
 import EstudiosContent from "./EstudiosContent";
-
+import data from "../../../public/jsons/studies.json";
 export const metadata: Metadata = {
 	title: "Estudios de David Desarrollador Web | SEO On Page | Wordpress",
 	description:
@@ -12,8 +11,7 @@ export const metadata: Metadata = {
 
 const page = async () => {
 	try {
-		const data = await getStudies();
-		return <EstudiosContent data={data}/>;
+		return <EstudiosContent data={data} />;
 	} catch (error) {
 		console.error(error);
 		return <div>Error al cargar los proyectos</div>;

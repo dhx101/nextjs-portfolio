@@ -1,7 +1,14 @@
 import React, { CSSProperties, FC } from "react";
-import { StudiesProp } from "@/helper/getStudies";
 import BackBtn from "@/ui/BackBtn/BackBtn";
 import Image from "next/image";
+
+interface StudiesProp {
+	degree: string,
+	time: string,
+	img: string,
+	institution: string,
+	description: string[]
+  }
 
 interface StudiesContentProps {
 	data: StudiesProp[];

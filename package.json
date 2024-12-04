@@ -1,6 +1,5 @@
 {
 	"name": "nextjs-portfolio",
-	"homepage": "https://dhx101.github.io/nextjs-portfolio/",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {

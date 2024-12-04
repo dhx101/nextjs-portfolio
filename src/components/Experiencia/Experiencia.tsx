@@ -1,5 +1,5 @@
 
-import LinkIncon from "@/ui/LinkIcon/LinkIncon";
+// import LinkIncon from "@/ui/LinkIcon/LinkIncon";
 import React, { CSSProperties, FC } from "react";
 
 interface ExperienciaProps {
@@ -9,8 +9,8 @@ interface ExperienciaProps {
 const Experiencia: FC<ExperienciaProps> = ({style}) => {
 	return (
 		<div className="block experiencia" style={style}>
-			<h2 className="tittle-gabinet">Experiencia</h2>
-			<LinkIncon />
+			<h2 className="tittle-gabinet">Málaga - España</h2>
+			{/* <LinkIncon /> */}
 		</div>
 	);
 };

@@ -565,7 +565,7 @@ table {
 }
 .me-info-socials {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -684,6 +684,9 @@ table {
 
 .actualidad {
   grid-row-end: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .estudios {
@@ -780,21 +783,20 @@ table {
 .pagProyecto {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  padding: 100px 0;
 }
 @media (max-width: 425px) {
   .pagProyecto {
-    margin: 100px 0;
+    align-items: center;
     height: auto;
     flex-direction: column-reverse;
   }
 }
 .pagProyecto .scroller {
   width: 30%;
-  height: 80%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -824,19 +826,17 @@ table {
 .pagProyecto .preview {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: center;
+  align-items: flex-start;
   gap: 20px;
-  width: -moz-min-content;
-  width: min-content;
   width: 70%;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 80%;
   margin: 5%;
   position: relative;
 }
 @media (max-width: 425px) {
   .pagProyecto .preview {
+    width: inherit;
+    padding: 0 10px;
     gap: 5px;
   }
 }
@@ -851,7 +851,9 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+}
+.pagProyecto .preview div img {
+  height: 100%;
 }
 @media (max-width: 425px) {
   .pagProyecto .preview div {
@@ -869,7 +871,7 @@ table {
 }
 .pagProyecto .preview .stack ul {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 10px;
 }
 .pagProyecto .preview .stack ul li {
@@ -901,9 +903,10 @@ table {
 .estudiosPage ul li {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 .estudiosPage ul li .img {
-  width: 250px;
+  height: 100%;
   margin: 20px;
   align-self: center;
 }
@@ -915,7 +918,6 @@ table {
 * {
   box-sizing: border-box;
   font-family: "Satoshi-Regular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  line-height: 1.2rem;
   text-decoration: none;
   transition-duration: 200ms;
 }
@@ -941,7 +943,6 @@ body {
 }
 
 .home {
-  width: 80%;
   max-width: 1160px;
   display: grid;
   padding: 20px;

@@ -14,8 +14,9 @@
 		li {
 			display: flex;
 			flex-direction: column;
+			gap: 20px;
 			.img {
-				width: 250px;
+				height: 100%;
 				margin: 20px;
 				align-self: center;
 			}
