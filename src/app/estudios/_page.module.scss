@@ -1,0 +1,28 @@
+.estudiosPage {
+	display: flex;
+	margin: 100px 0;
+	max-width: 1160px;
+
+	ul {
+		display: grid;
+		gap: 25px;
+		grid-template-columns: repeat(2, 1fr);
+		@media (max-width: 1024px) {
+			grid-template-columns: 1fr;
+			margin: 0 20px;
+		}
+		li {
+			display: flex;
+			flex-direction: column;
+			.img {
+				width: 250px;
+				margin: 20px;
+				align-self: center;
+			}
+            .school {
+                font-weight: 700;
+                font-size: 2rem;
+            }
+		}
+	}
+}

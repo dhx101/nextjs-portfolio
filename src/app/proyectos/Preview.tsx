@@ -32,12 +32,11 @@ const Preview: FC<PreviewProp> = ({ array, hoveredId }) => {
 										<Image
 											src={`/stack/${item}.png`} // Path to the stack image
 											alt={item} // Alt text for accessibility
-											width={25} // Example width
-											height={25} // Example height
+											width={30} // Example width
+											height={30} // Example height
 											quality={80} // Image quality for optimization
 											style={{
 												objectFit: "contain", // Adjust for tech stack images
-												width: "100%",
 												height: "auto",
 											}}
 										/>
@@ -48,7 +47,7 @@ const Preview: FC<PreviewProp> = ({ array, hoveredId }) => {
 							<p>No se ha especificado el Stack utilizado</p>
 						)}
 					</div>
-					<div>
+					<div className="previewText">
 						<h3>{previewItem.name}</h3>
 						{/* <Link href={`/proyectos/${hoveredId}`}>Más Información</Link> */}
 					</div>

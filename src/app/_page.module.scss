@@ -39,14 +39,18 @@
 	grid-row-end: span 4;
 	display: flex;
 	gap: 20px;
+
 	&-info {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		gap: 10px;
+		width: 100%;
 		&-text {
 			display: flex;
 			flex-direction: column;
 			gap: 5px;
+			max-width: fit-content;
 			strong {
 				font-family: "Satoshi-Bold";
 			}
@@ -59,6 +63,12 @@
 		&-socials {
 			display: flex;
 			gap: 20px;
+			width: 100%;
+			flex-wrap: wrap;
+
+			@media (max-width: 425px) {
+				align-items: center;
+			}
 			a {
 				border-top: 1px solid rgb(115, 0, 138);
 				border-right: 3px solid rgb(115, 0, 138);
@@ -101,6 +111,9 @@
 		}
 	}
 	&-photo {
+		@media (max-width: 1024px) {
+			display: none;
+		}
 		img {
 			height: 100%;
 			width: 100%;
@@ -108,7 +121,6 @@
 			object-position: center;
 			border-radius: 7px;
 		}
-				
 	}
 }
 
@@ -117,6 +129,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+	@media (max-width: 1024px) {
+		grid-column-end: span 3;
+		grid-row-end: auto;
+	}
 	div {
 		display: flex;
 		flex-direction: column;
@@ -139,6 +155,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	@media (max-width: 1024px) {
+		grid-column-end: span 3;
+		grid-row-end: auto;
+	}
 	.details {
 		font-size: 1.1rem;
 		color: rgb(111, 111, 111);
@@ -192,6 +212,9 @@
 	align-items: flex-start;
 	justify-content: center;
 	height: 100%;
+	@media (max-width: 1024px) {
+		grid-row-end: span 3;
+	}
 
 	div {
 		display: flex;
@@ -224,6 +247,10 @@
 			transform: translate(5px, -5px);
 			fill: rgb(115, 0, 138);
 		}
+	}
+
+	@media (max-width: 1024px) {
+		grid-row-end: span 2;
 	}
 }
 

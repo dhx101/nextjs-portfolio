@@ -1,4 +1,3 @@
-// src/helpers/getProjects.ts
 export interface Project {
 	name: string;
 	img: string;
