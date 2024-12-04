@@ -5,7 +5,7 @@
 	height: 100vh;
 	overflow: hidden;
 	padding: 100px 0;
-	@media (max-width: 425px) {
+	@media (max-width: 800px) {
 		align-items: center;
 		height: auto;
 		flex-direction: column-reverse;
@@ -17,7 +17,7 @@
 		gap: 10px;
 		padding: 25px;
 		overflow-y: scroll;
-		@media (max-width: 425px) {
+		@media (max-width: 800px) {
 			width: max-content;
 			overflow: visible;
 		}
@@ -39,11 +39,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		justify-content: center;
 		gap: 20px;
 		width: 70%;
-		max-height: 80%;
-		margin: 5%;
 		position: relative;
+		align-self: center;
+		padding: 5%;
 		@media (max-width: 425px) {
 			width: inherit;
 			padding: 0 10px;
@@ -88,7 +89,7 @@
 		}
 
 		img {
-			height: 100%;
+		
 			border-radius: 7px;
 		}
 	}
