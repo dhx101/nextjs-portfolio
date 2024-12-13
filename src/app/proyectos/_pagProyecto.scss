@@ -50,6 +50,9 @@
 			padding: 0 10px;
 			gap: 5px;
 		}
+		&__text {
+			display: flex;
+		}
 		div {
 			background-color: rgba(23, 23, 23);
 			border: solid 1px rgb(90, 90, 90);

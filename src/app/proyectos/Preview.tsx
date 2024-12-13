@@ -6,6 +6,7 @@ interface Project {
   name: string;
   img: string;
   stack?: string[]; // Optional array of tech stack
+  link?: string;
 }
 
 // Define props for the component
@@ -23,11 +24,11 @@ const Preview: FC<PreviewProp> = ({ data, hoveredId }) => {
       {previewItem ? (
         <>
           <Image
-            src={`/projects/${previewItem.img}`} // Path to the project's image
-            alt={previewItem.name} // Alt text for accessibility
-            width={900} // Example width
-            height={600} // Example height
-            quality={80} // Image quality for optimization
+            src={`/projects/${previewItem.img}`} 
+            alt={previewItem.name} 
+            width={900} 
+            height={600} 
+            quality={80} 
             style={{ objectFit: "cover", width: "100%", height: "auto" }}
           />
           <div className="stack">
@@ -36,13 +37,13 @@ const Preview: FC<PreviewProp> = ({ data, hoveredId }) => {
                 {previewItem.stack.map((item, index) => (
                   <li key={index}>
                     <Image
-                      src={`/stack/${item}.png`} // Path to the stack image
-                      alt={item} // Alt text for accessibility
-                      width={30} // Example width
-                      height={30} // Example height
-                      quality={80} // Image quality for optimization
+                      src={`/stack/${item}.png`} 
+                      alt={item} 
+                      width={30} 
+                      height={30} 
+                      quality={80} 
                       style={{
-                        objectFit: "contain", // Adjust for tech stack images
+                        objectFit: "contain", 
                         height: "auto",
                       }}
                     />
@@ -53,10 +54,19 @@ const Preview: FC<PreviewProp> = ({ data, hoveredId }) => {
               <p>No se ha especificado el Stack utilizado</p>
             )}
           </div>
-          <div className="previewText">
+          <div className="preview__text">
             <h3>{previewItem.name}</h3>
-            {/* Uncomment if you have a route for individual project pages */}
             {/* <Link href={`/proyectos/${hoveredId}`}>Más Información</Link> */}
+            <a href={previewItem.link}><Image
+             src="/icons/web.svg" 
+             alt="Link al proyecto" 
+             width={30} 
+             height={30} 
+             quality={80} 
+             style={{
+               objectFit: "contain", 
+               height: "auto",
+             }}/></a>
           </div>
         </>
       ) : (
