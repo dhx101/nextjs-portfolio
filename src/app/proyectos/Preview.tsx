@@ -24,12 +24,13 @@ const Preview: FC<PreviewProp> = ({ data, hoveredId }) => {
       {previewItem ? (
         <>
           <Image
+          className="project-img"
             src={`/projects/${previewItem.img}`} 
             alt={previewItem.name} 
             width={900} 
             height={600} 
-            quality={80} 
-            style={{ objectFit: "cover", width: "100%", height: "auto" }}
+            quality={100} 
+           
           />
           <div className="stack">
             {previewItem.stack && previewItem.stack.length > 0 ? (

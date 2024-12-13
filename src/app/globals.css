@@ -782,10 +782,8 @@ table {
 
 .pagProyecto {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
   padding: 100px 0;
 }
 @media (max-width: 800px) {
@@ -800,7 +798,7 @@ table {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 25px;
+  padding: 0 25px;
   overflow-y: scroll;
 }
 @media (max-width: 800px) {
@@ -830,9 +828,10 @@ table {
   justify-content: center;
   gap: 20px;
   width: 70%;
-  position: relative;
+  height: 900px;
   align-self: center;
   padding: 5%;
+  overflow: hidden;
 }
 @media (max-width: 425px) {
   .pagProyecto .preview {
@@ -881,6 +880,15 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.pagProyecto .preview .project-img {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .pagProyecto .preview img {
   border-radius: 7px;
