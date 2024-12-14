@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 	description:
 		"Soy David Huang Xie, Desarrollador web, apasionado por el SEO, Wordpress y la optimización de sitios web para mejorar su rendimiento y visibilidad en línea.",
 	keywords: "Desarrollador Web SEO",
+	icons: "./file.svg",
 };
 
 export default function RootLayout({
