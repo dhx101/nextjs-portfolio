@@ -9,7 +9,7 @@ interface ExperienciaProps {
 const Experiencia: FC<ExperienciaProps> = ({style}) => {
 	return (
 		<div className="block experiencia" style={style}>
-			<h2 className="tittle-gabinet">Málaga - España</h2>
+			<h2 className="tittle-gabinet">España</h2>
 			{/* <LinkIncon /> */}
 		</div>
 	);
