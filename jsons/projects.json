@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Makisu Sushi Petrer",
+		"img": "Makisu.png",
+		"alt": "Makisu Sushi Petrer Buffet Libre",
+		"miniDescription": "Página web para el Buffet Libre de comida Asiática en Petrer, realizada con Wordpress, Elementor, se le trabajó el SEO, las imágenes fueron tomadas por mí mismo y el diseño y desarrollo fueron realizados por mí",
+		"stack": ["Wordpress", "Elementor"],
+		"link": "https://makisusushipetrer.es/"
+	},{
 		"name": "Psicología Montse Coronado",
 		"img": "MontseCoronado.png",
 		"alt": "E-commerce de Montse Coronado",
