@@ -11,7 +11,7 @@ const Actualidad: FC<ActualidadProps> = ({ style }) => {
 			style={style}>
 			<h2 className="gabinet">Ahora</h2>
 			<p className="special">¿Qué hago?</p>
-			<p>Estoy trabajando en <a href="https://soleacreativa.com/">Soleá Creativa</a> como desarrollador web y especialista en SEO</p>
+			<p>Estoy trabajando en <b><a href="https://soleacreativa.com/" target="_blank">Soleá Creativa</a></b> como desarrollador web y especialista en SEO</p>
 		</div>
 	);
 };

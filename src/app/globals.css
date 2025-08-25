@@ -677,10 +677,6 @@ table {
   display: flex;
   flex-direction: column;
 }
-.contact div a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
 
 .actualidad {
   grid-row-end: span 2;
@@ -950,6 +946,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #a520ca;
+}
+
+b {
+  font-weight: 600;
 }
 
 .home {
