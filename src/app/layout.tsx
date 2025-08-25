@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 // import NavLinks from "@/ui/NavLinks/NavLinks";
 // import Image from "next/image";
 
@@ -18,9 +19,21 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
-			<body className="background">
-				{children}
-			</body>
+			<head>
+				<Script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-PJMKVE24MK"
+				/>
+				<Script id="google-analytics">
+					{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PJMKVE24MK');
+          `}
+				</Script>
+			</head>
+			<body className="background">{children}</body>
 		</html>
 	);
 }
